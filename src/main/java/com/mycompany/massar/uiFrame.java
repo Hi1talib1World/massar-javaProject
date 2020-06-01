@@ -175,7 +175,7 @@ public class uiFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        SignUp signUp = new SignUp();
+        SignUp signUp = new SignUp(Cards);
         Cards.add("SignUp", signUp);
         CardLayout cl = (CardLayout) Cards.getLayout();
         cl.next(Cards);
