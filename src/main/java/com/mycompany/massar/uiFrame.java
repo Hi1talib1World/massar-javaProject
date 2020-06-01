@@ -5,6 +5,8 @@ import javax.swing.JOptionPane;
 
 public class uiFrame extends javax.swing.JFrame {
 
+        private Admin masterClass;
+
     public uiFrame() {
         initComponents();
     }
@@ -173,7 +175,10 @@ public class uiFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jPasswordField1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        SignUp signUp = new SignUp(Cards, masterClass.getUserAccountDirectory());
+        Cards.add("SignUp", signUp);
+        CardLayout cl = (CardLayout) Cards.getLayout();
+        cl.next(Cards);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -211,6 +216,7 @@ public class uiFrame extends javax.swing.JFrame {
         });
     }
 
+    private javax.swing.JPanel Cards;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
