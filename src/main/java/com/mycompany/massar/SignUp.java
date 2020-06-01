@@ -1,9 +1,13 @@
 
 package com.mycompany.massar;
 
+import java.awt.CardLayout;
+import javax.swing.JPanel;
+
 public class SignUp extends javax.swing.JFrame {
 
-  
+      private JPanel cards;
+
     public SignUp() {
         initComponents();
     }
@@ -125,7 +129,9 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+       cards.remove(this);
+        CardLayout cLayout = (CardLayout) cards.getLayout();
+        cLayout.previous(cards);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
