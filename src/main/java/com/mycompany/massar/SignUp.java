@@ -7,12 +7,10 @@ import javax.swing.JPanel;
 public class SignUp extends javax.swing.JFrame {
 
       private JPanel cards;
-    private UserAccountDirectory userAccountDirectory;
 
-    public SignUp(JPanel Cards, UserAccountDirectory userAccountDirectory) {
+    public SignUp(JPanel Cards) {
         initComponents();
         this.cards = Cards;
-        this.userAccountDirectory = userAccountDirectory;
     }
 
     @SuppressWarnings("unchecked")
