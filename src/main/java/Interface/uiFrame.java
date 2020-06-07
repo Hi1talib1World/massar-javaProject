@@ -13,6 +13,10 @@ public class uiFrame extends javax.swing.JFrame {
         resetFields();
     }
 
+        public void resetFields() {
+        usernameTF.setText("");
+        passwordTF.setText("");
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
