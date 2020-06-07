@@ -9,6 +9,8 @@ public class uiFrame extends javax.swing.JFrame {
 
     public uiFrame() {
         initComponents();
+        masterClass = Configre.intialize();
+        resetFields();
     }
 
     @SuppressWarnings("unchecked")
