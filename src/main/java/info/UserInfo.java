@@ -21,7 +21,7 @@ public class UserInfo {
     private String role;
     private Object userType;
     
-    public UserAccount (String un, String pwd, String role, Object ut ) {
+    public UserInfo (String un, String pwd, String role, Object ut ) {
         this.username = un;
         this.password = pwd;
         this.role = role;
