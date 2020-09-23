@@ -14,8 +14,9 @@ public class uiFrame extends javax.swing.JFrame {
     }
 
         public void resetFields() {
-        usernameTF.setText("");
-        passwordTF.setText("");
+        jTextField1.setText("");
+        jPasswordField1.setText("");
+        
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -118,7 +119,7 @@ public class uiFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UserInfo ua = masterClass.getUserAccountDirectory().getUserAccount(usernameTF.getText());
         if (ua != null) {
-            if (ua.getPassword().equals(passwordTF.getText())) {
+            if (ua.getPassword().equals(jTextField1.getText())) {
                 String role = ua.getRole();
                 switch (role) {
                     case "admin": {
