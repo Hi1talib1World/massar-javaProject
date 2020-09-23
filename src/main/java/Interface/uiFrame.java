@@ -14,8 +14,8 @@ public class uiFrame extends javax.swing.JFrame {
     }
 
         public void resetFields() {
-        jTextField1.setText("");
-        jPasswordField1.setText("");
+        usernameTF.setText("");
+        passwordTF.setText("");
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -116,7 +116,53 @@ public class uiFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        UserInfo ua = masterClass.getUserAccountDirectory().getUserAccount(usernameTF.getText());
+        if (ua != null) {
+            if (ua.getPassword().equals(passwordTF.getText())) {
+                String role = ua.getRole();
+                switch (role) {
+                    case "admin": {
+                        MainAdminPanel mainAdminPanel = new MainAdminPanel(Cards, masterClass);
+                        Cards.add("MainAdminPanel", mainAdminPanel);
+                        CardLayout cl = (CardLayout) Cards.getLayout();
+                        cl.next(Cards);
+                        break;
+                    }
 
+                    case "retailer": {
+                        if (ua.getUserType() instanceof Retailer) {
+                            Retailer retailer = (Retailer) ua.getUserType();
+                            MainRetailerPanel mainRetailerPanel = new MainRetailerPanel(Cards, retailer);
+                            Cards.add("MainAdminPanel", mainRetailerPanel);
+                            CardLayout cl = (CardLayout) Cards.getLayout();
+                            cl.next(Cards);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Incorrect User");
+                        }
+                        break;
+                    }
+
+                    case "customer": {
+                        if (ua.getUserType() instanceof Customer) {
+                            Customer customer = (Customer) ua.getUserType();
+                            MainCustomerPanel mainCustomerPanel = new MainCustomerPanel(Cards, customer, masterClass);
+                            Cards.add("MainAdminPanel", mainCustomerPanel);
+                            CardLayout cl = (CardLayout) Cards.getLayout();
+                            cl.next(Cards);
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Incorrect User");
+                        }
+                        break;
+
+                    }
+
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Incorrect Password");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "User with username " + usernameTF.getText() + " not found!");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
