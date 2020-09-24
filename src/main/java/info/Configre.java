@@ -19,14 +19,14 @@ public class Configre {
         Person p = new Person();
         p.setFirstName("Admin");
         p.setLastName("Admin");
-        UserAccount ua = new UserAccount("admin", "admin", UserAccount.ADMIN_ROLE, p);
+        UserInfo ua = new UserInfo("admin", "admin", UserAccount.ADMIN_ROLE, p);
         msc.getUserAccountDirectory().addUserAccount(ua);
         //Adding Retailer 1
         Retailer r = new Retailer();
         r.setRetailerName("Apple");
         r.setZipCode("02115");
         msc.getRetailerCatalogue().addRetailer(r);
-        UserAccount uar = new UserAccount("apple", "apple", UserAccount.RETAILER_ROLE, r);
+        UserInfo uar = new UserInfo("apple", "apple", UserAccount.RETAILER_ROLE, r);
         msc.getUserAccountDirectory().addUserAccount(uar);
         //Adding Product to Retailer 1
         Product p1 = new Product("iPhoneX", 1000, 10);
@@ -43,18 +43,8 @@ public class Configre {
         r1.setRetailerName("Tesla");
         r1.setZipCode("02115");
         msc.getRetailerCatalogue().addRetailer(r1);
-        UserAccount uar1 = new UserAccount("tesla", "tesla", UserAccount.RETAILER_ROLE, r1);
+        UserInfo uar1 = new UserInfo("tesla", "tesla", UserAccount.RETAILER_ROLE, r1);
         msc.getUserAccountDirectory().addUserAccount(uar1);
-        
-        //Adding Product to Retailer 2
-        Product p4 = new Product("ModelS", 50000, 5);
-        r1.getProductCatalogue().addProduct(p4);
-        
-        Product p5 = new Product("Model1", 60000, 10);
-        r1.getProductCatalogue().addProduct(p5);
-        
-        Product p6 = new Product("Model2", 70000, 20);
-        r1.getProductCatalogue().addProduct(p6);
         
         
         //Adding Retailer 3
@@ -62,7 +52,7 @@ public class Configre {
         r3.setRetailerName("Macy's");
         r3.setZipCode("02116");
         msc.getRetailerCatalogue().addRetailer(r3);
-        UserAccount uar2 = new UserAccount("macys", "macys", UserAccount.RETAILER_ROLE, r3);
+        UserInfo uar2 = new UserInfo("macys", "macys", UserInfo.RETAILER_ROLE, r3);
         msc.getUserAccountDirectory().addUserAccount(uar2);
         
         //Adding Products to Retailer 3
