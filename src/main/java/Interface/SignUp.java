@@ -42,9 +42,9 @@ public class SignUp extends javax.swing.JFrame {
         newAirlinerLbl.setText("massar Sign Up");
         newAirlinerLbl.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel2.setText("First Name");
+        jLabel2.setText("الإسم الشخصي");
 
-        headQLbl.setText("Last Name");
+        headQLbl.setText("الإسم العائلي");
 
         headQLbl1.setText("Username");
 
@@ -100,7 +100,7 @@ public class SignUp extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jButton1))
                                     .addComponent(dobTF, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 254, Short.MAX_VALUE)))
+                        .addGap(0, 228, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
