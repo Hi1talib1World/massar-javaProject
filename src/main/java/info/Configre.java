@@ -27,16 +27,7 @@ public class Configre {
         r.setZipCode("02115");
         msc.getRetailerCatalogue().addRetailer(r);
         UserInfo uar = new UserInfo("apple", "apple", UserAccount.RETAILER_ROLE, r);
-        msc.getUserAccountDirectory().addUserAccount(uar);
-        //Adding Product to Retailer 1
-        Product p1 = new Product("iPhoneX", 1000, 10);
-        r.getProductCatalogue().addProduct(p1);
-        
-        Product p2 = new Product("iPhone8", 700, 10);
-        r.getProductCatalogue().addProduct(p2);
-        
-        Product p3 = new Product("Mac Book Pro", 1500, 10);
-        r.getProductCatalogue().addProduct(p3);
+        msc.getUserAccountDirectory().addUserAccount(uar);    
         
         //Adding Retailer 2
         Retailer r1 = new Retailer();
@@ -54,13 +45,6 @@ public class Configre {
         msc.getRetailerCatalogue().addRetailer(r3);
         UserInfo uar2 = new UserInfo("macys", "macys", UserInfo.RETAILER_ROLE, r3);
         msc.getUserAccountDirectory().addUserAccount(uar2);
-        
-        //Adding Products to Retailer 3
-        Product p7 = new Product("Pants", 5, 50);
-        r3.getProductCatalogue().addProduct(p7);
-        
-        Product p8 = new Product("Shirts", 3, 75);
-        r3.getProductCatalogue().addProduct(p8);
         
         
         Customer per = new Customer("08-21-1995", "Tom","02115");
