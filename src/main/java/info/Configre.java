@@ -65,18 +65,9 @@ public class Configre {
         
         Customer per = new Customer("08-21-1995", "Tom","02115");
         msc.getCustomerCatalogue().addCustomer(per);
-        UserAccount uac = new UserAccount("cust", "cust", UserAccount.CUSTOMER_ROLE, per);
+        UserInfo uac = new UserInfo("cust", "cust", UserInfo.CUSTOMER_ROLE, per);
         msc.getUserAccountDirectory().addUserAccount(uac);
         
-        Customer per1 = new Customer("11-20-1993", "Dick","02115");
-        msc.getCustomerCatalogue().addCustomer(per1);
-        UserAccount uac1 = new UserAccount("cust1", "cust1", UserAccount.CUSTOMER_ROLE, per1);
-        msc.getUserAccountDirectory().addUserAccount(uac1);
-        
-        Customer per2 = new Customer("05-20-1998", "Harry","02116");
-        msc.getCustomerCatalogue().addCustomer(per2);
-        UserAccount uac2 = new UserAccount("cust2", "cust2", UserAccount.CUSTOMER_ROLE, per2);
-        msc.getUserAccountDirectory().addUserAccount(uac2);
         
         return msc;
     }
