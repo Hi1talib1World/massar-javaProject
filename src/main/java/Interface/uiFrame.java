@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class uiFrame extends javax.swing.JFrame {
 
-        private Admin masterClass;
+    private Admin masterClass;
 
     public uiFrame() {
         initComponents();
