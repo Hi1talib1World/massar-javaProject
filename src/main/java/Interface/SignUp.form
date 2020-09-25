@@ -93,7 +93,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="0" pref="254" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="228" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -157,14 +157,14 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="First Name"/>
+            <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x625;&#x633;&#x645; &#x627;&#x644;&#x634;&#x62e;&#x635;&#x64a;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="firstNameTF">
         </Component>
         <Component class="javax.swing.JLabel" name="headQLbl">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Last Name"/>
+            <Property name="text" type="java.lang.String" value="&#x627;&#x644;&#x625;&#x633;&#x645; &#x627;&#x644;&#x639;&#x627;&#x626;&#x644;&#x64a;"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="lastNameTF">
