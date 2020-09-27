@@ -13,16 +13,16 @@ public class Admin {
     
 
     public static Admin masterClass;
-    private RetailerCatalogue retailerCatalogue;
+    private teacherCatalogue retailerCatalogue;
     private CustomerCatalogue customerCatalogue;
-    private UserAccountDirectory userAccountDirectory;
+    private UserInfoDirectory userAccountDirectory;
     private static double treasury = 0.0;
     
     private Admin()
     {
-        this.retailerCatalogue=new RetailerCatalogue();
+        this.retailerCatalogue=new teacherCatalogue();
         this.customerCatalogue=new CustomerCatalogue();
-        this.userAccountDirectory = new UserAccountDirectory();
+        this.userAccountDirectory = new UserInfoDirectory();
     }
     
     public static Admin getInstance() {
@@ -36,7 +36,7 @@ public class Admin {
      *
      * @return
      */
-    public RetailerCatalogue getRetailerCatalogue() {
+    public teacherCatalogue getRetailerCatalogue() {
         return retailerCatalogue;
     }
 
@@ -44,7 +44,7 @@ public class Admin {
      *
      * @return
      */
-    public CustomerCatalogue getCustomerCatalogue() {
+    public telmidCatalogue getCustomerCatalogue() {
         return customerCatalogue;
     }
 
