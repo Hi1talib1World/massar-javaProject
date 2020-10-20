@@ -25,7 +25,7 @@ public class teacher {
     public teacher()
     {
         counter++;
-        this.productCatalogue = new ProductCatalogue();
+        this.productCatalogue = new teacherCatalogue();
         this.productSoldList = new ArrayList<>();
         this.teacherNumber = String.valueOf(counter);
         this.retailerInvoiceList = new teacherInvoiceList();
