@@ -122,9 +122,9 @@ public class teacherCatalogue {
 
     };
 
-    public static Comparator<Product> BySalePrice = new Comparator<Product>() {
+    public static Comparator<Notes> BySalePrice = new Comparator<Notes>() {
         @Override
-        public int compare(Product p1, Product p2) {
+        public int compare(Notes p1, Notes p2) {
             return (int) ((p1.getSoldNumber() * p1.getPrice()) - (p2.getSoldNumber() * p2.getPrice()));
         }
     };
